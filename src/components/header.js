@@ -1,31 +1,20 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import download from '../images/download.svg'
+import styles from '../styles/header.module.scss'
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+  <header className={styles.header}>
+    <div className={styles.container}>
+      <h1>
+        &#123; {siteTitle} &#125;
+      </h1>
+      <h1>
+        <a href={process.env.GOOGLE_DOCS_PDF_ID}>
+          download
+          <img src={download} alt="->" />
+        </a>
       </h1>
     </div>
   </header>

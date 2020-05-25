@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Source+Code+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    // colors
+    --bg-color: #faf9f9;
+    --blue-header-color: #073763;
+    --font-black-color: #424242;
+
+    // fonts
+    --oswald-font-fam: "Oswald", sans-serif;
+    --sourcecode-font-fam: "Source Code Pro", monospace;
+    --inconsolata-font-fam: 'Inconsolata', 'monospace';
+
+    // font sizes
+    --font-size-small: calc(0.5rem + 0.5vw)
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, html {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  display: block;
+  font-family: var(--sourcecode-font-fam);
+  font-size: clamp(.9rem, 1vw, 1rem);
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--font-black-color);
+  position: relative;
+  box-sizing: content-box;
+  background: var(--bg-color);
+}
+
+footer {
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--blue-header-color);
+}
