@@ -9,7 +9,7 @@ module.exports = {
     description: `online resume...`,
     author: `@khalill`,
   },
-  pathPrefix: `/cv`,
+  pathPrefix: `/`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
