@@ -26,5 +26,5 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         GOOGLE_SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
-        GATSBY_GDOCS_PDF_ID: ${{ secrets.GOOGLE_DOCS_PDF_ID }}
+        GATSBY_GDOCS_PDF_ID: ${{ secrets.GATSBY_GDOCS_PDF_ID }}
         CI: true
