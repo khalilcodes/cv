@@ -23,6 +23,3 @@ jobs:
 
     - name: deploy
       run: npm run deploy
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        CI: true
