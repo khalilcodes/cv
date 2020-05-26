@@ -12,14 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - run: npm install -g gatsby-cli
+    
     - name: NODEJS
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: npm install -g gatsby-cli
-    - run: |
-        git config --global user.email "khalilali.j@gmail.com"
-        git config --global user.name "Khalil Ali"
 
     - name: deploy
       run: npm install && npm run deploy
