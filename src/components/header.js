@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => (
       <h1>
         &#123; {siteTitle} &#125;
       </h1>
-      
+
       <h1>
-        <a href={process.env.GOOGLE_DOCS_PDF_ID}>
+        <a href={process.env.GATSBY_GDOCS_PDF_ID}>
           download
           <img src={download} alt="->" />
         </a>
