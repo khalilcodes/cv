@@ -15,7 +15,13 @@ jobs:
     - name: NODEJS
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '12.x'
 
     - name: deploy
       run: npm install && npm run deploy
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        GOOGLE_SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
+        GOOGLE_DOCS_PDF_ID: ${{ secrets.GOOGLE_DOCS_PDF_ID }}
+        CI: true
