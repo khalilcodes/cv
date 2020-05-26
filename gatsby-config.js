@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Khalil Ali`,
     subTitle: `Resume`,
-    description: `Hey, you can view my resume online...`,
+    description: `online resume...`,
     author: `@khalill`,
   },
   pathPrefix: `/cv`,
