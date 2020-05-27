@@ -9,9 +9,11 @@
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        padding: 0.5rem clamp(2rem, 6vw, 6rem);
         border-bottom: 1px solid grey;
-        
+        padding: 
+            unquote('max(0.7rem, 0.7vw)')
+            unquote('max(2rem, 6vw)');
+
         h1 {
             margin: 0;
             padding: 0;
@@ -24,7 +26,7 @@
         }
 
         img {
-            width: clamp(10px, 1.5vw, 12px);
+            width: unquote('max(10px, 0.9vw)');
             margin-left: 0.2em;
         }
     }

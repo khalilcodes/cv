@@ -1,8 +1,11 @@
-name: build & deploy to gh-pages on push
+name: build & deploy
 
 on:
   push:
     branches: [ master ]
+
+  repository_dispatch:
+    types: [ production-deploy ]
 
 jobs:
 

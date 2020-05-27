@@ -1,9 +1,9 @@
 .container {
   margin: 0 auto;
-  margin-top: unquote('max(10%, 10vh)');
-  margin-bottom: unquote('max(5%, 5vh)');
-  max-width: 842px;
+  max-width: unquote('max(842px, 52vw)');
   width: calc(100vw - 4rem);
+  margin-top: unquote('max(8%, 8vh)');
+  margin-bottom: unquote('max(5%, 5vh)');
 }
 
 // STYLES -- SOCIAL LINKS
@@ -18,21 +18,15 @@
   }
 
   img {
-    width: 14px;
-    height: 14px;
+    width: unquote('max(12px, 0.9vw)');
     margin-right: 0.5em;
     align-items: center;
-
-    @media (max-width: 768px) {
-      width: 12px;
-      height: 12px;
-    }
   }
 
   a {
     color: var(--font-black-color);
     text-decoration-color: var(--blue-header-color);
-    line-height: clamp(1rem, 1vw, 1rem);
+    line-height: unquote('min(max(1rem, 1vw), 1rem)');
   }
 
   span {
@@ -76,10 +70,10 @@
 
 // -- STYLES -- TITLE NAME
 .title {
-  padding-top: clamp(12pt, 2rem, 10pt);
+  padding-top: unquote('min(max(10pt, 2rem), 12pt)');
   color: var(--blue-header-color);
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  line-height: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: unquote('max(1.5rem, 2vw)');
+  line-height: unquote('max(1rem, 1.5vw)');
 }
 
 p {
@@ -94,7 +88,7 @@ ul {
 // -- STYLES -- HEADERS (PROFILE, EDUCATION, ETC..)
 h1 {
   display: block;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: unquote('max(1rem, 1.2vw)');
   font-family: var(--oswald-font-fam);
   font-weight: 500;
   padding: 0;
@@ -148,7 +142,7 @@ li {
 // -- STYLES -- EDUCATION & EXPERIENCE HEADINGS
 h2 {
   font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: unquote('max(1rem, 1.1vw)');
   line-height: 1.2;
   text-align: left;
   margin-bottom: 0;
@@ -180,14 +174,18 @@ h2 {
   left: 1px;
   margin: 0 0 1rem 0;
   padding: 0;
+  max-width: 80%;
     
   .table-cell {
     box-sizing: border-box;
     margin: -1px 0 0 -1px;
-    max-width: 380px;
     width: 50%;
     padding: 0.8em 1.2em;
     border: 1px solid black;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
   }
 
   @media (max-width: 375px) {
