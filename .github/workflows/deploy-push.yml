@@ -18,7 +18,7 @@ jobs:
     - name: NODEJS
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '18.x'
     - run: |
         git config --global user.email "khalilali.j@gmail.com"
         git config --global user.name "Khalil Ali"
