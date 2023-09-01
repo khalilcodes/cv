@@ -40,15 +40,15 @@ export const query = graphql`
       nodes {
         id
         title
-        subtitle
+        school
         year
       }
     }
     allSheetTechSkills {
       nodes {
         id
-        firstColumn
-        secondColumn
+        programming
+        tools
       }
     }
     allSheetExperience {

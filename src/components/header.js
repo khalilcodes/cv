@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import download from '../images/download.svg'
-import styles from '../styles/header.module.scss'
+import * as styles from '../styles/header.module.scss'
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>

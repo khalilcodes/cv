@@ -165,7 +165,21 @@ h2 {
   }
 }
 
-// -- STYLES -- RELEVANT TECHNICAL SKILLS TABLE
+// -- STYLES -- RELEVANT TECHNICAL SKILLS LIST
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    // color: var(--blue-header-color);
+    border: 0.8px solid var(--blue-header-color);
+    padding: 0;
+    margin: 10px 10px 4px 0;
+    padding: 2.5px 8px;
+  }
+}
+
 .table-wrapper {
   display: flex;
   flex-wrap: wrap;
