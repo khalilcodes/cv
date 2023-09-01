@@ -89,10 +89,10 @@ const IndexPage = ({ data }) => {
 
         <ul className={styles.techList}>
           {data?.allSheetTechSkills?.nodes?.map(items => (
-            <li key={items.id}>{items.programming}</li>
+            items.programming && <li key={items.id}>{items.programming}</li>
           ))}
           {data?.allSheetTechSkills?.nodes?.map(items => (
-            <li key={items.id}>{items.tools}</li>
+            items.tools && <li key={items.id}>{items.tools}</li>
           ))}
         </ul>
 
@@ -103,28 +103,30 @@ const IndexPage = ({ data }) => {
           <hr />
         </h1>
 
-        {data?.allSheetExperience?.nodes?.sort((a,b) => a.sheetId - b.sheetId).map(items => (
-          <React.Fragment key={items.id}>
-            <h2 className={styles.mobileTitle}>
-              <span>{items.position}&nbsp;</span>
-              <span className={styles.italic}>—&nbsp;{items.company}</span>
-            </h2>
-            <p>
-              <span>{items.year}</span>
-            </p>
+        {data?.allSheetExperience?.nodes?.sort(
+            (a,b) => a.sheetId - b.sheetId
+          ).map(items => (
+            <React.Fragment key={items.id}>
+              <h2 className={styles.mobileTitle}>
+                <span>{items.position}&nbsp;</span>
+                <span className={styles.italic}>—&nbsp;{items.company}</span>
+              </h2>
+              <p>
+                <span>{items.year}</span>
+              </p>
 
-            {/* WORK DESCRIPTION */}
+              {/* WORK DESCRIPTION */}
 
-            <ul className={styles.expListStyle}>
-              {data?.allSheetWorkList?.nodes?.map(el =>
-                el.ref !== null && el.ref === items.ref ? (
-                  <li key={el.id} className={styles.expItems}>
-                    <span>{el.work}</span>
-                  </li>
-                ) : null
-              )}
-            </ul>
-          </React.Fragment>
+              <ul className={styles.expListStyle}>
+                {data?.allSheetWorkList?.nodes?.map(el =>
+                  el.ref !== null && el.ref === items.ref ? (
+                    <li key={el.id} className={styles.expItems}>
+                      <span>{el.work}</span>
+                    </li>
+                  ) : null
+                )}
+              </ul>
+            </React.Fragment>
         ))}
 
         {/* SOFT SKILLS */}

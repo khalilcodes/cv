@@ -2,7 +2,7 @@ name: build & deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
   repository_dispatch:
     types: [ production-deploy ]
@@ -21,7 +21,7 @@ jobs:
         node-version: '18.x'
     - run: |
         git config --global user.email "khalilali.j@gmail.com"
-        git config --global user.name "Khalil Ali"
+        git config --global user.name "khalilcodes"
 
     - name: deploy
       run: npm install && npm run deploy
