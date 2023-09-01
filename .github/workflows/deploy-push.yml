@@ -26,7 +26,7 @@ jobs:
     - name: deploy
       run: npm install && npm run deploy
       env:
-        GH_TOKEN: ${{ secrets.GH_PAT }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         GOOGLE_SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
         GATSBY_GDOCS_PDF_ID: ${{ secrets.GATSBY_GDOCS_PDF_ID }}
