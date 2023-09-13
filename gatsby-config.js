@@ -49,7 +49,6 @@ module.exports = {
       options: {
         trackingIds: process.env.GA_TRACKING_ID.split(","),
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
