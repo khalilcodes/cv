@@ -1,0 +1,49 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import DynamicSvg from '../components/DynamicSvg.astro';
+import { parseLink, getIcon } from '../lib/utils';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const cv = await getEntry("cv", "index");
+
+if (!cv) throw new Error("cv data not found");
+
+const { title, socialLinks, contact, location } = cv?.data;
+const { Content } = await render(cv);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="flex flex-col gap-4 max-w-3xl m-auto pt-20 sm:pt-26 px-8">
+      <section class="flex flex-col sm:flex-row sm:items-center font-source-code text-sm gap-4 sm:gap-2">
+        {socialLinks?.map((item: string) => (
+          <>
+            <div class="flex items-center gap-1">
+              <DynamicSvg svgRaw={getIcon(item) as string} class="w-4 sm:w-5 h-fit" />
+              <a href={parseLink(item)} target="_blank" class="underline">{item.replace("https://", "")}</a>
+            </div>
+            <span class="hidden sm:block last:hidden">|</span>
+          </>
+        ))}
+      </section>
+      <section class="flex items-center gap-2 font-source-code text-sm italic">
+        <p>{contact}</p>
+        <span>|</span>
+        <p>{location}</p>
+      </section>
+			<h1 class="font-medium text-2xl sm:text-3xl text-indigo-950 mt-2">{title.toUpperCase()}</h1>
+			<section class="content flex flex-col gap-3">
+        <Content />
+      </section>
+		</main>
+		<Footer />
+	</body>
+</html>

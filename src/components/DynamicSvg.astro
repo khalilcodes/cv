@@ -1,0 +1,20 @@
+---
+// src/components/DynamicSvg.astro
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'svg'> {
+  svgRaw: string;
+}
+
+const { svgRaw, ...attributes } = Astro.props;
+
+// Convert the Astro attributes object into a clean HTML string
+const attrString = Object.entries(attributes)
+  .map(([key, value]) => `${key}="${value}"`)
+  .join(' ');
+
+// Safely inject custom attributes into the raw string's opening <svg> tag
+const dynamicSvg = svgRaw.replace(/^<svg/, `<svg ${attrString}`);
+---
+
+<Fragment set:html={dynamicSvg} />

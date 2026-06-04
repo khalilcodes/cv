@@ -1,53 +1,26 @@
 {
-  "name": "khalil-ali-resume",
-  "private": true,
-  "description": "online resume",
-  "version": "0.1.0",
-  "author": "Khalil Ali <khalilali.j@gmail.com>",
+  "name": "cv",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "gatsby": "^5.12.3",
-    "gatsby-plugin-google-gtag": "^5.12.0",
-    "gatsby-plugin-image": "^3.0.0",
-    "gatsby-plugin-manifest": "^5.12.0",
-    "gatsby-plugin-offline": "^6.12.0",
-    "gatsby-plugin-react-helmet": "^6.12.0",
-    "gatsby-plugin-sass": "^6.12.0",
-    "gatsby-plugin-sharp": "^5.12.0",
-    "gatsby-source-filesystem": "^5.12.0",
-    "gatsby-source-google-spreadsheet": "^2.0.0",
-    "gatsby-transformer-sharp": "^5.12.0",
-    "node-sass": "^9.0.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "sharp": "^0.32.5"
+    "@astrojs/mdx": "^6.0.1",
+    "@astrojs/partytown": "^2.1.7",
+    "@fontsource-variable/oswald": "^5.2.8",
+    "@fontsource-variable/source-code-pro": "^5.2.7",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.4.3",
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
-    "prettier": "^3.0.3",
-    "query-string": "^8.1.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://git:${GH_TOKEN}@github.com/khalilcodes/cv.git",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/khalilcodes/cv"
-  },
-  "bugs": {
-    "url": "https://github.com/khalilcodes/cv/issues"
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

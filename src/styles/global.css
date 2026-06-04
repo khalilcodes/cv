@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "@fontsource-variable/oswald/wght.css";
+@import "@fontsource-variable/source-code-pro/wght.css";
+
+@theme {
+  --color-theme-white: #faf9f9;
+  --color-theme-black: #424242;
+  --color-theme-blue: #073763;
+  --font-oswald: 'Oswald Variable', sans-serif;
+  --font-source-code: 'Source Code Pro Variable', monospace;
+}
+
+:root {
+  --theme-background: #faf9f9;
+  ---gray-dark: #424242;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply font-oswald m-0 p-0 text-left text-theme-black bg-theme-white wrap-break-word;
+}
+
+.content {
+  hr {
+    @apply mt-1;
+  }
+
+  h2 {
+    @apply text-lg;
+  }
+  
+  p, li {
+    @apply font-source-code text-sm;
+  }
+  
+  ul {
+    @apply py-2 ml-4;
+  }
+
+  li {
+    @apply list-disc;
+  }
+}
+
+.profile {
+  ul {
+    @apply ml-0 mt-3;
+  }
+
+  li::before {
+    @apply content-["\002794"] inline-block absolute left-0 z-0;
+  }
+
+  li {
+    @apply relative list-none pl-[1.5em] pb-1.5 text-justify;
+
+    span {
+      @apply no-underline align-baseline not-italic;
+    }
+  }
+}
+
+.education {
+  strong {
+    @apply text-indigo-950;
+  }
+
+  ul {
+    @apply flex flex-col gap-3 ml-0 mt-2;
+  }
+
+  li {
+    @apply list-none;
+  }
+}
+
+.tech {
+  ul {
+    @apply flex flex-wrap items-center gap-4 ml-0 mt-2;
+  }
+
+  li {
+    @apply list-none;
+  }
+
+  li {
+    @apply px-2 py-0.5 border-[0.8px] border-theme-blue;
+  }
+}
+
+.experience {
+  hr {
+    @apply mb-4;
+  }
+  strong {
+    @apply text-indigo-950;
+  }
+
+  li {
+    @apply pb-1.5;
+  }
+}
+
+.skills {
+  ul {
+    @apply flex flex-wrap gap-2 sm:text-justify;
+  }
+
+  li {
+    @apply pr-5;
+  }
+}
