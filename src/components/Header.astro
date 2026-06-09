@@ -5,12 +5,12 @@ const pdfDownload = import.meta.env.PUBLIC_GDOC_ID
 ---
 
 <header class="fixed top-0 w-full px-8 sm:px-0 font-source-code text-base bg-theme-white z-10 border-b border-b-gray-950">
-	<nav class="flex items-center justify-between max-w-7xl m-auto py-2">
+	<nav class="h-fit flex items-center justify-between max-w-7xl m-auto py-2">
 		<h2><a href="/">{"{ Resume }"}</a></h2>
 		<div>
 			<a href={pdfDownload} class="flex items-center gap-1">
         download
-        <DynamicSvg svgRaw={icons.download} class="w-4 h-fit" />
+        <DynamicSvg svgRaw={icons.download} class="w-4 h-auto" />
       </a>
 		</div>
 	</nav>

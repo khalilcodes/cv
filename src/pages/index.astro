@@ -27,7 +27,7 @@ const { Content } = await render(cv);
         {socialLinks?.map((item: string) => (
           <>
             <div class="flex items-center gap-1">
-              <DynamicSvg svgRaw={getIcon(item) as string} class="w-4 sm:w-5 h-fit" />
+              <DynamicSvg svgRaw={getIcon(item) as string} class="w-4 sm:w-5 h-auto" />
               <a href={parseLink(item)} target="_blank" class="underline">{item.replace("https://", "")}</a>
             </div>
             <span class="hidden sm:block last:hidden">|</span>
