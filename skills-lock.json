@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "fa4ffac562a8e7349282f606391ede22d23118e998dc8b5ac931662fa734c1b7"
+    },
+    "resume-tailor": {
+      "source": "paramchoudhary/resumeskills",
+      "sourceType": "github",
+      "skillPath": "skills/resume-tailor/SKILL.md",
+      "computedHash": "8b740a9d2ba26d33b02f0a6408975ed2aa1c322a6ceede049f06bd27878e1eff"
+    },
+    "tech-resume-optimizer": {
+      "source": "paramchoudhary/resumeskills",
+      "sourceType": "github",
+      "skillPath": "skills/tech-resume-optimizer/SKILL.md",
+      "computedHash": "2e29bf63c6532e5fb233aef21a7f7418a472fc52883995cd0d70544f1ba9b2ed"
+    }
+  }
+}
