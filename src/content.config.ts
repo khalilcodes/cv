@@ -9,6 +9,7 @@ const cv = defineCollection({
 	schema: () =>
 		z.object({
 			title: z.string(),
+      subTitle: z.string().optional(),
 			socialLinks: z.array(z.string()).default([]).optional(),
       contact: z.string(),
       location: z.string(),
